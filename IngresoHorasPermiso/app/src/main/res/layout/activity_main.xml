@@ -1,33 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    android:gravity="start"
+    android:orientation="vertical">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <TextView
+        android:id="@+id/tvHoraEntrada"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        tools:text="Ingrese Hora Entrada" />
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <include layout="@layout/content_main" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etHoraEntrada"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:hint="8:30"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:autofillHints="" />
+    <TextView
+        android:id="@+id/tvHoraSalida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Ingrese Hora Salida" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <EditText
+        android:id="@+id/etHoraSalida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="16:30"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btCalcular4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular" />
+
+</LinearLayout>
