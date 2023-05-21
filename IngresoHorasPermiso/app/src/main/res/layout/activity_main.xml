@@ -3,42 +3,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:gravity="start"
     android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_foreground"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/tvHoraEntrada"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Ingrese Hora Entrada" />
+        android:text="@string/hora_entrada" />
 
     <EditText
+        android:layout_margin="12dp"
+        android:drawablePadding="12dp"
+        android:drawableStart="@drawable/vector_hour"
         android:id="@+id/etHoraEntrada"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="8:30"
         android:inputType="text"
-        android:minHeight="48dp"
-        android:autofillHints="" />
+        android:minHeight="48dp" />
+
     <TextView
         android:id="@+id/tvHoraSalida"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Ingrese Hora Salida" />
+        android:text="@string/hora_salida" />
 
     <EditText
+        android:layout_margin="12dp"
+        android:drawablePadding="12dp"
+        android:drawableStart="@drawable/vector_hour"
         android:id="@+id/etHoraSalida"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="16:30"
         android:inputType="text"
-        android:minHeight="48dp"
-        android:autofillHints="" />
+        android:minHeight="48dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        />
 
     <Button
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:id="@+id/btCalcular4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calcular" />
+        android:text="@string/calcularHora" />
 
 </LinearLayout>
